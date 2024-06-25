@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2c2c2c; /* Cinza escuro para o fundo */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  display: flex; /* Utilizar flexbox para centralizar verticalmente */
+  flex-direction: column; /* Direção de coluna para centralizar verticalmente */
+}
+
+body {
+  flex: 1; /* Ocupar o espaço restante verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinhar o conteúdo no topo */
+}
+
+h1, h2, h3, label {
+  color: #ffcc00; /* Amarelo */
+}
+
+.container {
+  max-width: 600px;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #ffcc00; /* Amarelo */
+  border: none;
+  color: #333333; /* Texto cinza escuro */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #ffeb3b; /* Amarelo mais claro */
+}
+
+.btn-secondary {
+  background-color: #999999; /* Cinza claro */
+  border: none;
+  color: #333333; /* Texto cinza escuro */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.session-block {
+  margin-bottom: 20px;
+  background-color: #444444; /* Fundo cinza escuro para os blocos */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Garante que cada session-block ocupa a largura máxima */
+  box-sizing: border-box; /* Evita que o padding afete a largura total */
+}
+
+.completed {
+  background-color: rgba(0, 255, 0, 0.2); /* Verde claro para completado */
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.timer {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    margin: 50px;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow custom-transparent-bg" style="width: 350px; background-color: #333333;">
+    <h2 class="text-center mb-4" style="color:#ffcc00;">Setup Training Session</h2>
+    <form (ngSubmit)="startTraining()">
+      <div class="mb-3">
+        <label for="warmup" class="form-label">Warm-up (minutes):</label>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="warmup" [(ngModel)]="warmup" name="warmup" required>
+      </div>
+      <div class="mb-3">
+        <label for="run" class="form-label">Run (minutes):</label>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="run" [(ngModel)]="run" name="run" required>
+      </div>
+      <div class="mb-3">
+        <label for="walk" class="form-label">Walk (minutes):</label>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="walk" [(ngModel)]="walk" name="walk" required>
+      </div>
+      <div class="mb-3">
+        <label for="cycles" class="form-label">Number of Cycles:</label>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="cycles" [(ngModel)]="cycles" name="cycles" required>
+      </div>
+      <div class="mb-3">
+        <label for="cooldown" class="form-label">Cool-down (minutes):</label>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="cooldown" [(ngModel)]="cooldown" name="cooldown" required>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3" style="background-color: #ffcc00; color: black; border: 0;">Start Training</button>
+    </form>
+  </div>
+</div>
+

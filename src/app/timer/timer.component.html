@@ -1,0 +1,6 @@
+<!-- src/app/timer/timer.component.html -->
+<div class="timer">
+  <h2>{{ currentPhase | titlecase }}</h2>
+  <h1>{{ formatTime(remainingTime) }}</h1>
+  <p *ngIf="currentPhase === 'run' || currentPhase === 'walk'">Cycle: {{ currentCycle }} / {{ cycles }}</p>
+</div>

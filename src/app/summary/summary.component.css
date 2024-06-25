@@ -1,0 +1,8 @@
+.summary-card .btn {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.summary-card .btn:last-child {
+  margin-right: 0;
+}
