@@ -9,6 +9,7 @@ import { TimerComponent } from './timer/timer.component';
 import { SummaryComponent } from './summary/summary.component';
 import { FormsModule } from '@angular/forms';
 import { SpeechService } from './services/speech.service';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SpeechService } from './services/speech.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    IonicModule.forRoot()
   ],
   providers: [SpeechService],
   bootstrap: [AppComponent]
