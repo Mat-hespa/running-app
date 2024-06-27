@@ -1,22 +1,23 @@
-<!-- src/app/summary/summary.component.html -->
-<div class="container">
-  <h1 class="mb-4" style="color: #ffcc00;">Weekly Training Summary</h1>
-  <div *ngFor="let session of sessions; let i = index" class="session-block mb-4">
-    <div [ngClass]="{'completed': session.completed}" class="summary-card p-3">
-      <h2 class="mb-3" style="color: rgba(255, 255, 255, 0.841);">Session {{ i + 1 }}</h2>
-      <p style="color: rgba(255, 255, 255, 0.841);"><strong>Warm-up:</strong> {{ session.warmup }} minutes</p>
-      <p style="color: rgba(255, 255, 255, 0.841);"><strong>Run:</strong> {{ session.run }} minutes</p>
-      <p style="color: rgba(255, 255, 255, 0.841);"><strong>Walk:</strong> {{ session.walk }} minutes</p>
-      <p style="color: rgba(255, 255, 255, 0.841);"><strong>Cycles:</strong> {{ session.cycles }}</p>
-      <p style="color: rgba(255, 255, 255, 0.841);"><strong>Cool-down:</strong> {{ session.cooldown }} minutes</p>
-      <div class="d-flex justify-content-between">
-        <button *ngIf="!session.completed && activeSessionIndex === null" (click)="startSession(i)" class="btn btn-primary mb-3" style="background-color: #ffcc00; color: black; border: 0;">Start Session</button>
-        <button *ngIf="session.completed" disabled class="btn btn-secondary mb-3">Completed</button>
-        <button (click)="removeSession(i)" class="btn btn-danger mb-3">Remove</button>
+<div class="custom-container">
+  <h1 class="mb-4 text-center" style="color: #ffcc00;">Weekly Training Summary</h1>
+  <div class="sessions-container">
+    <div *ngFor="let session of sessions; let i = index" class="session-block mb-4">
+      <div [ngClass]="{'completed': session.completed}" class="summary-card p-3">
+        <h2 class="mb-3" style="color: rgba(255, 255, 255, 0.841);">Session {{ i + 1 }}</h2>
+        <p style="color: rgba(255, 255, 255, 0.841);"><strong>Warm-up:</strong> {{ session.warmup }} minutes</p>
+        <p style="color: rgba(255, 255, 255, 0.841);"><strong>Run:</strong> {{ session.run }} minutes</p>
+        <p style="color: rgba(255, 255, 255, 0.841);"><strong>Walk:</strong> {{ session.walk }} minutes</p>
+        <p style="color: rgba(255, 255, 255, 0.841);"><strong>Cycles:</strong> {{ session.cycles }}</p>
+        <p style="color: rgba(255, 255, 255, 0.841);"><strong>Cool-down:</strong> {{ session.cooldown }} minutes</p>
+        <div class="d-flex justify-content-between">
+          <button *ngIf="!session.completed && activeSessionIndex === null" (click)="startSession(i)" class="btn btn-primary mb-3" style="background-color: #ffcc00; color: black; border: 0;">Start</button>
+          <button *ngIf="session.completed" disabled class="btn btn-secondary mb-3">Completed</button>
+          <button (click)="removeSession(i)" class="btn btn-danger mb-3">Remove</button>
+        </div>
       </div>
-    </div>
-    <div *ngIf="activeSessionIndex === i" class="mt-3">
-      <app-timer style="color: #ffcc00;" [warmup]="session.warmup" [run]="session.run" [walk]="session.walk" [cycles]="session.cycles" [cooldown]="session.cooldown" (trainingComplete)="completeSession()"></app-timer>
+      <div *ngIf="activeSessionIndex === i" class="mt-3">
+        <app-timer style="color: #ffcc00;" [warmup]="session.warmup" [run]="session.run" [walk]="session.walk" [cycles]="session.cycles" [cooldown]="session.cooldown" (trainingComplete)="completeSession()"></app-timer>
+      </div>
     </div>
   </div>
 </div>

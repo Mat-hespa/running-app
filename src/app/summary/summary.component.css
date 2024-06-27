@@ -1,3 +1,15 @@
+.custom-container {
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.sessions-container {
+  max-height: 80vh; /* ou a altura desejada */
+  overflow-y: auto;
+  padding: 15px; /* para evitar que o conteúdo se sobreponha à barra de rolagem */
+}
+
 .summary-card .btn {
   flex: 1;
   margin-right: 10px;

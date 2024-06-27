@@ -4,26 +4,32 @@
     <form (ngSubmit)="startTraining()">
       <div class="mb-3">
         <label for="warmup" class="form-label">Warm-up (minutes):</label>
-        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="warmup" [(ngModel)]="warmup" name="warmup" required>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="warmup" [(ngModel)]="warmup" name="warmup" required
+               inputmode="numeric">
       </div>
       <div class="mb-3">
         <label for="run" class="form-label">Run (minutes):</label>
-        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="run" [(ngModel)]="run" name="run" required>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="run" [(ngModel)]="run" name="run" required
+               inputmode="numeric">
       </div>
       <div class="mb-3">
         <label for="walk" class="form-label">Walk (minutes):</label>
-        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="walk" [(ngModel)]="walk" name="walk" required>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="walk" [(ngModel)]="walk" name="walk" required
+               inputmode="numeric">
       </div>
       <div class="mb-3">
         <label for="cycles" class="form-label">Number of Cycles:</label>
-        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="cycles" [(ngModel)]="cycles" name="cycles" required>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="cycles" [(ngModel)]="cycles" name="cycles" required
+               inputmode="numeric">
       </div>
       <div class="mb-3">
         <label for="cooldown" class="form-label">Cool-down (minutes):</label>
-        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="cooldown" [(ngModel)]="cooldown" name="cooldown" required>
+        <input style="background-color: rgba(255, 255, 255, 0.841);" type="number" class="form-control" id="cooldown" [(ngModel)]="cooldown" name="cooldown" required
+               inputmode="numeric">
       </div>
       <button type="submit" class="btn btn-primary mt-3" style="background-color: #ffcc00; color: black; border: 0;">Start Training</button>
     </form>
   </div>
 </div>
+
 

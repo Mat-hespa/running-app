@@ -1,2 +1,17 @@
-<router-outlet></router-outlet>
+<ion-app style="--ion-background-color: #2c2c2c;">
+  <!-- Conteúdo da página -->
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
 
+  <!-- Toolbar na parte inferior -->
+  <ion-footer>
+    <ion-toolbar style="--background: #ffcc00; height: 60px;">
+      <ion-buttons slot="primary" style="width: 100%; justify-content: center;">
+        <ion-button routerLink="" routerDirection="root" style="--color: #2c2c2c;">
+          <ion-icon slot="icon-only" name="home"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>

@@ -28,6 +28,7 @@ h1, h2, h3, label {
   background-color: #333333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
 }
 
 .btn-primary {
@@ -75,6 +76,7 @@ h1, h2, h3, label {
   .container {
     padding: 10px;
     margin: 50px;
+    width: auto;
   }
   .btn-primary, .btn-secondary {
     width: 100%;
